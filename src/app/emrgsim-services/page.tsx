@@ -14,11 +14,6 @@ export default function Services() {
     { icon: "/lounges.svg", title: "Lounges", count: 11 },
     { icon: "/baggage.svg", title: "Baggage Services", count: 8 },
     { icon: "/medical.svg", title: "Medical Services", count: 5 },
-    { icon: "/car-rental.svg", title: "Car Rental Services", count: 15 },
-    { icon: "/food-beverages.svg", title: "Food & Beverages", count: 49 },
-    { icon: "/lounges.svg", title: "Lounges", count: 11 },
-    { icon: "/baggage.svg", title: "Baggage Services", count: 8 },
-    { icon: "/medical.svg", title: "Medical Services", count: 5 },
   ];
 
   return (
@@ -28,16 +23,39 @@ export default function Services() {
         href="https://emrgsim.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-center flex items-center justify-center gap-3 mb-6 fixed top-0 left-0 right-0 bg-[#00539b] text-white shadow-md p-4 cursor-pointer"
+        className="text-center flex items-center   justify-between gap-3 mb-6 fixed top-0 left-0 right-0 bg-[#00539b] text-white shadow-md shadow-[#00539b] py-8 px-4 cursor-pointer hover:bg-[#003f7a] transition-all duration-300"
       >
-        <h1 className="text-xl font-medium text-white">
-          Get a travel Cellular Plan
-        </h1>
-        <Image src="/assets/logo.png" alt="Logo" width={25} height={25} />
+        <div className="flex items-center gap-3">
+          <Image src="/assets/logo.png" alt="Logo" width={35} height={35} />
+          <h1 className="text-lg font-medium">Get a travel Cellular Plan</h1>
+        </div>
+        <button className="flex gap-2 absolute top-9 right-3 bg-yellow-300 pl-3 pr-5 py-2 rounded-lg">
+          <span className="relative text-black text-xs font-medium">
+            Click Here
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide  absolute  bottom-1 h-5 w-5 right-0 z-50 lucide-mouse-pointer-click-icon lucide-mouse-pointer-click"
+          >
+            <path d="M14 4.1 12 6" />
+            <path d="m5.1 8-2.9-.8" />
+            <path d="m6 12-1.9 2" />
+            <path d="M7.2 2.2 8 5.1" />
+            <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
+          </svg>
+        </button>
       </a>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-2 gap-6 mt-16">
+      <div className="grid grid-cols-2 gap-6 py-32">
         {services.map((service, index) => (
           <div
             key={index}
