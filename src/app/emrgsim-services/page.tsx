@@ -28,9 +28,9 @@ export default function Services() {
         href="https://emrgsim.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-center flex items-center justify-center gap-3 mb-6 fixed top-0 left-0 right-0 bg-white shadow-md p-4 cursor-pointer"
+        className="text-center flex items-center justify-center gap-3 mb-6 fixed top-0 left-0 right-0 bg-[#00539b] text-white shadow-md p-4 cursor-pointer"
       >
-        <h1 className="text-2xl font-bold text-gray-600">
+        <h1 className="text-xl font-bold text-white">
           Get a travel Cellular Plan
         </h1>
         <Image src="/assets/logo.png" alt="Logo" width={25} height={25} />
