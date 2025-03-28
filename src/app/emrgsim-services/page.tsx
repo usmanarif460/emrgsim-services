@@ -1,19 +1,28 @@
 import Image from "next/image";
-
+import {
+  BaggageClaim,
+  Beer,
+  Car,
+  HandCoins,
+  TicketsPlane,
+  Plane,
+  Wifi,
+  Grid2x2,
+  CircleParking,
+  Ambulance,
+  Armchair,
+  MousePointerClick,
+} from "lucide-react";
 export default function Services() {
   const services = [
-    { icon: "/airlines.svg", title: "Airlines", count: 59 },
-    { icon: "/airport-services.svg", title: "Airport Services", count: 16 },
-    {
-      icon: "/currency-exchange.svg",
-      title: "Banks & Currency Exchange",
-      count: 10,
-    },
-    { icon: "/car-rental.svg", title: "Car Rental Services", count: 15 },
-    { icon: "/food-beverages.svg", title: "Food & Beverages", count: 49 },
-    { icon: "/lounges.svg", title: "Lounges", count: 11 },
-    { icon: "/baggage.svg", title: "Baggage Services", count: 8 },
-    { icon: "/medical.svg", title: "Medical Services", count: 5 },
+    { icon: Plane, title: "Airlines", count: 59 },
+    { icon: TicketsPlane, title: "Airport Services", count: 16 },
+    { icon: HandCoins, title: "Currency Exchange", count: 10 },
+    { icon: Car, title: "Car Rental Services", count: 15 },
+    { icon: Beer, title: "Food & Beverages", count: 49 },
+    { icon: Armchair, title: "Lounges", count: 11 },
+    { icon: BaggageClaim, title: "Baggage Services", count: 8 },
+    { icon: Ambulance, title: "Medical Services", count: 5 },
   ];
 
   return (
@@ -33,24 +42,10 @@ export default function Services() {
           <span className="relative text-black text-xs font-medium">
             Click Here
           </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
+          <MousePointerClick
+            className=" absolute bottom-1 h-5 w-5 right-0 z-50 "
             stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide  absolute  bottom-1 h-5 w-5 right-0 z-50 lucide-mouse-pointer-click-icon lucide-mouse-pointer-click"
-          >
-            <path d="M14 4.1 12 6" />
-            <path d="m5.1 8-2.9-.8" />
-            <path d="m6 12-1.9 2" />
-            <path d="M7.2 2.2 8 5.1" />
-            <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" />
-          </svg>
+          />
         </button>
       </a>
 
@@ -59,17 +54,13 @@ export default function Services() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-between bg-gray-50 p-4 rounded-xl shadow-md"
+            className="flex flex-col items-center justify-between bg-gray-50 px-4 py-8 rounded-xl shadow-md"
           >
-            <Image
-              src={service.icon}
-              alt={service.title}
-              width={48}
-              height={48}
-              className="mb-2"
-            />
+            <div className="h-12 w-12 flex items-center justify-center text-cyan-600 mb-2">
+              <service.icon />
+            </div>
             <div className="flex items-center justify-center flex-col gap-1">
-              <h2 className="text-sm font-medium text-gray-800 text-center ">
+              <h2 className="text-sm  text-gray-800 text-center ">
                 {service.title}
               </h2>
               <p className="text-xs text-gray-600">
@@ -84,71 +75,23 @@ export default function Services() {
       <div className="fixed bottom-0 left-0 right-0 bg-white shadow-md">
         <div className="flex justify-around py-4">
           <div className="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-gray-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
+            <Plane className="text-gray-600" />
+
             <span className="text-sm text-gray-600">Flights</span>
           </div>
           <div className="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-gray-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 10h18M9 21V3m6 18V3"
-              />
-            </svg>
+            <CircleParking className="text-gray-600" />
+
             <span className="text-sm text-gray-600">Parking</span>
           </div>
           <div className="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-cyan-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 12h14M12 5v14"
-              />
-            </svg>
+            <Grid2x2 className="text-cyan-600" />
+
             <span className="text-sm text-cyan-500">Services</span>
           </div>
           <div className="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-gray-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8.5 16.5a3.5 3.5 0 017 0m-7-3a7 7 0 0114 0m-14-3a10.5 10.5 0 0121 0M12 20h.01"
-              />
-            </svg>
+            <Wifi className="text-gray-600" />
+
             <span className="text-sm text-gray-600">Free Wi-Fi</span>
           </div>
         </div>
