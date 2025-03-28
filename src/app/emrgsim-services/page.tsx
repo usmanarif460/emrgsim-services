@@ -57,7 +57,7 @@ export default function Services() {
             className="flex flex-col items-center justify-between bg-gray-50 px-4 py-8 rounded-xl shadow-md"
           >
             <div className="h-12 w-12 flex items-center justify-center text-cyan-600 mb-2">
-              <service.icon />
+              <service.icon className="w-8 h-8" />
             </div>
             <div className="flex items-center justify-center flex-col gap-1">
               <h2 className="text-sm  text-gray-800 text-center ">
