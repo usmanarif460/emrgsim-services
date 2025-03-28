@@ -36,7 +36,7 @@ export default function Services() {
       >
         <div className="flex items-center gap-3">
           <Image src="/assets/logo.png" alt="Logo" width={35} height={35} />
-          <h1 className="text-lg font-medium">Get a travel Cellular Plan</h1>
+          <h1 className="text-lg font-bold">Get a local Cellular Plan</h1>
         </div>
         <button className="flex gap-2 absolute top-9 right-3 bg-yellow-300 pl-3 pr-5 py-2 rounded-lg">
           <span className="relative text-black text-xs font-medium">
